@@ -22,16 +22,15 @@ function main() {
 
   setAndReset();
 
-  let highest = 0;
+  caloriesPerIndividual.sort((a, b) => b - a);
 
+  console.log('highest === first below.')
   for (individual in caloriesPerIndividual) {
     console.log(caloriesPerIndividual[individual]);
-
-    if(highest < caloriesPerIndividual[individual]){
-      highest = caloriesPerIndividual[individual] 
-    }
   }
-  console.log(highest);
+
+  console.log('total of first 3 =')
+  console.log(caloriesPerIndividual[0] + caloriesPerIndividual[1] + caloriesPerIndividual[2]);
 }
 
 function setAndReset() {
